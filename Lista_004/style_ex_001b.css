@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    }
+    
+    div.container>div,
+    form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    
+    form {
+    border: 2px solid rgb(140, 20, 170);
+    width: 30vw;
+    height: 80vh;
+    padding-bottom: 5vh;
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    h1 {
+    background-image: url("edificio.png");
+    background-size: cover;
+    width: 30vw;
+    height: 32vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 1vh;
+    }
+    
+    .name, .email, .tel {
+    width: 20vw;
+    height: 5vh;
+    border: thin solid gray;
+    margin-bottom: 1vh;
+    padding-left: 2.5vw;
+    font-family: Arial, sans-serif;
+    }
+    
+    .name {
+    background: url("user.png") #fff no-repeat;
+    background-size: 2vw;
+    }
+    
+    .email {
+    background: url("email.png") #fff no-repeat;
+    background-position: 2px;
+    background-size: 1.78vw;
+    }
+    
+    .tel {
+    background: url("tel.png") #fff no-repeat;
+    background-position: 2px;
+    background-size: 1.78vw;
+    }
+    
+    .comments {
+    background: url("message.png") #fff no-repeat;
+    background-size: 2.5vw;
+    padding-left: 2.5vw;
+    padding-top: 1.5vh;
+    font-family: Arial, sans-serif;
+    }
+    
+    .name, .email, .tel, .comments::placeholder {
+    font-family: Arial, sans-serif;
+    }
+    
+    .but {
+    background-color: #ae14cd;
+    border: none;
+    border-radius: 1vw;
+    width: 8vw;
+    height: 5vh;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.705);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    }
+    
+    .but:hover {
+    box-shadow: none;
+    }

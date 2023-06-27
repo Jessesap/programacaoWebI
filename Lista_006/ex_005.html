@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_ex_005.css">
+    <title>Ex_005</title>
+</head>
+<body>
+    <div>
+      <p>Nome da Empresa:</p>
+      <p class="editable" onclick="makeEditable(this, 'empresa')">NASA</p>
+    </div>
+  
+    <div>
+      <p>Nome do Funcionário:</p>
+      <p class="editable" onclick="makeEditable(this, 'funcionario')">Elon Musk</p>
+    </div>
+  
+    <div>
+      <p>Função:</p>
+      <p class="editable" onclick="makeEditable(this, 'funcao')">Jardineiro</p>
+    </div>
+  
+    <div>
+      <p>Foto:</p>
+      <img src="Lista_006\img\foto.png" alt="Foto do Funcionário" class="editable" onclick="makeEditable(this, 'foto')">
+    </div>
+  
+    <script>
+      function makeEditable(element, field) {
+        const text = element.innerText;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = text;
+  
+        const button = document.createElement('button');
+        button.innerText = 'Confirmar';
+        button.onclick = function() {
+          updateField(element, field, input.value);
+        };
+  
+        element.classList.add('hidden');
+        element.parentNode.insertBefore(input, element);
+        element.parentNode.insertBefore(button, element.nextSibling);
+      }
+  
+      function updateField(element, field, value) {
+        element.innerText = value;
+        element.classList.remove('hidden');
+        element.nextSibling.remove(); // Remove o input
+        element.nextSibling.remove(); // Remove o botão
+      }
+    </script>
+  </body>
+  </html>
